@@ -3,6 +3,7 @@ lock "~> 3.16.0"
 
 set :application, "myapp"
 set :repo_url, "git@github.com:maful/testingrails.git"
+set :branch, "main"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
