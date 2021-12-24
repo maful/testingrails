@@ -39,7 +39,7 @@ install_plugin Capistrano::SCM::Git
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.0.2'
-set :rbenv_path, '/usr/bin/rbenv'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} /usr/bin/rbenv exec"
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
